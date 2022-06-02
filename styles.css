@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;800&display=swap");
 
 :root {
   --light-cyan: #cee3e9;
@@ -12,9 +12,9 @@ body {
   padding: 0;
   margin: 0;
   background-color: var(--dark-blue);
-  font-family: 'Manrope', sans-serif;
+  font-family: "Manrope", sans-serif;
 }
-button{
+button {
   outline: none;
   border: none;
 }
@@ -52,72 +52,74 @@ main {
   text-align: center;
   max-width: 350px;
   font-weight: 600;
-  margin: 10px 0px ;
+  margin: 10px 0px;
 }
-#divider, #divider_desktop{
-    margin: 20px 0px;
-}
-
-.circle{
-    background-color: var(--neon);
-    height: 30px;
-    border-radius: 100px;
-    width: 30px;
-    display: flex;
-    padding: 10px;
-    align-items: center;
-    justify-content: center;
-    bottom: -25px;
-    cursor: pointer;
-    position: absolute;
-    overflow: hidden;
-    transition: 10ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+#divider,
+#divider_desktop {
+  margin: 20px 0px;
 }
 
-
-.dice{
-    height: 20px;
-    width: auto;
+.circle {
+  background-color: var(--neon);
+  height: 30px;
+  border-radius: 100px;
+  width: 30px;
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
+  bottom: -25px;
+  cursor: pointer;
+  position: absolute;
+  overflow: hidden;
+  transition: 10ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-.dice.rotate{
-    animation: rotate .5s;
+.dice {
+  height: 20px;
+  width: auto;
+}
+
+.dice.rotate {
+  animation: rotate 0.5s;
 }
 
 @keyframes rotate {
-    50% {transform: rotate(180deg);}
+  50% {
+    transform: rotate(180deg);
+  }
 }
 
-#divider_desktop{
+#divider_desktop {
   display: none;
 }
 
-footer{
+footer {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.attribution{
+.attribution {
   margin-bottom: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  color:  white;
+  color: white;
 }
 
-.attribution > span{
+.attribution > span {
   margin: 2px 0px;
   color: var(--light-cyan);
   font-family: monospace;
   text-transform: lowercase;
 }
-.attribution > span > a{
+.attribution > span > a {
   color: var(--neon);
   margin-bottom: 10px;
   text-decoration: none;
 }
 
-.share_btn{
+.share_btn {
   position: absolute;
   top: 0;
   cursor: pointer;
@@ -132,36 +134,40 @@ footer{
   display: flex;
 }
 
-.share_icon{
+.share_icon {
   height: 15px;
 }
 
-
-.share_tooltip{
- position: absolute; 
- left: 0;
- width: 80px;
- margin: 0px 50px;
- padding: 5px;
- font-weight: 600;
- font-size: 12px;
- font-family: 'Manrope', sans-serif;
- border-radius: 5px;
- background: #cee3e9;
+.share_tooltip {
+  position: absolute;
+  bottom: 0;
+  width: 80px;
+  margin: 50px 50px;
+  padding: 5px;
+  font-weight: 600;
+  font-size: 12px;
+  font-family: "Manrope", sans-serif;
+  border-radius: 5px;
+  background: #cee3e9;
 }
-.circle:hover, .share_btn:hover{
-  box-shadow: 1px 1px 18px 5px rgba(82,255,168,0.50);
+.circle:hover,
+.share_btn:hover {
+  box-shadow: 1px 1px 18px 5px rgba(82, 255, 168, 0.5);
 }
 
-.hide{
+.hide {
   display: none;
 }
 
-@media (min-width: 1440px){
-  #divider{
+@media (min-width: 1440px) {
+  #divider {
     display: none;
   }
-  #divider_desktop{
+  #divider_desktop {
     display: block;
+  }
+  .share_tooltip {
+    left: 0;
+    margin: 0px 50px;
   }
 }
