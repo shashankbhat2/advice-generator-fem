@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution](https://advice-generator-fem.shashankbhat.co.in/)
-- Live Site URL: [Live✨](https://github.com/shashankbhat2/advice-generator-fem)
+- Solution URL: [Solution](https://github.com/shashankbhat2/advice-generator-fem)
+- Live Site URL: [Live✨](https://advice-generator-fem.shashankbhat.co.in/)
 
 ## My process
 
