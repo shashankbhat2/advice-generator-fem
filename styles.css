@@ -30,7 +30,7 @@ main {
   align-items: center;
   justify-content: center;
   min-height: 200px;
-  min-width: 400px;
+  min-width: 350px;
   background: var(--dark-gray-blue);
   box-shadow: 32px 16px 63px -3px #1f2632;
 }
