@@ -29,7 +29,8 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-width: 400px;
+  min-height: 200px;
+  min-width: 350px;
   background: var(--dark-gray-blue);
   box-shadow: 32px 16px 63px -3px #1f2632;
 }
@@ -39,7 +40,7 @@ main {
   text-transform: uppercase;
   font-size: 12px;
   font-weight: 600;
-  letter-spacing: 4px;
+  letter-spacing: 2px;
 }
 
 .text_content {
@@ -49,7 +50,7 @@ main {
   font-weight: 600;
   margin: 10px 0px ;
 }
-#divider{
+#divider, #divider_desktop{
     margin: 20px 0px;
 }
 
@@ -77,10 +78,6 @@ main {
     width: auto;
 }
 
-/* .circle:hover > .dice{
-    animation: rotate 2s infinite;
-} */
-
 .dice.rotate{
     animation: rotate .5s;
 }
@@ -88,4 +85,41 @@ main {
 @keyframes rotate {
     50% {transform: rotate(180deg);}
 }
-  
+
+#divider_desktop{
+  display: none;
+}
+
+footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.attribution{
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color:  white;
+}
+
+.attribution > span{
+  margin: 2px 0px;
+  color: var(--light-cyan);
+  font-family: monospace;
+  text-transform: lowercase;
+}
+.attribution > span > a{
+  color: var(--neon);
+  margin-bottom: 10px;
+  text-decoration: none;
+}
+
+@media (min-width: 1440px){
+  #divider{
+    display: none;
+  }
+  #divider_desktop{
+    display: block;
+  }
+}
