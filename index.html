@@ -12,32 +12,58 @@
       href="./images/favicon-32x32.png"
     />
     <link rel="stylesheet" href="styles.css" />
-    <title>Advice Generator App | Frontend Mentor Challenge | Shashank Bhat</title>
+    <title>
+      Advice Generator App | Frontend Mentor Challenge | Shashank Bhat
+    </title>
     <script src="https://unpkg.com/feather-icons"></script>
   </head>
   <body>
     <main>
       <div class="card">
+        <button class="share_btn" id="share_btn">
+          <i data-feather="share-2" class="share_icon"></i>
+          <div class="share_tooltip hide" id="share_tooltip">Advice Copied!</div>
+        </button>
         <small class="text_small" id="advice_number">Advice #</small>
         <h2 class="text_content" id="advice_content">
           "It is easy to sit up and take notice, what's difficult is getting up
           and taking action"
         </h2>
-        <img src="./images/pattern-divider-desktop.svg" id="divider_desktop" alt="divider" />
-        <img src="./images/pattern-divider-mobile.svg" id="divider" alt="divider" />
+        <img
+          src="./images/pattern-divider-desktop.svg"
+          id="divider_desktop"
+          alt="divider"
+        />
+        <img
+          src="./images/pattern-divider-mobile.svg"
+          id="divider"
+          alt="divider"
+        />
         <div class="circle" id="advice_circle">
-          <img src="./images/icon-dice.svg" id="dice" class="dice"alt="dice" />
+          <img src="./images/icon-dice.svg" id="dice" class="dice" alt="dice" />
         </div>
       </div>
     </main>
     <footer>
       <div class="attribution">
-        <span>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend
-            Mentor</a></span>
-        <span>Coded by <a href="https://shashankbhat.co.in/" target="_blank">Shashank Bhat</a></span>
+        <span
+          >Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+            >Frontend Mentor</a
+          ></span
+        >
+        <span
+          >Coded by
+          <a href="https://shashankbhat.co.in/" target="_blank"
+            >Shashank Bhat</a
+          ></span
+        >
       </div>
     </footer>
     <script src="./main.js"></script>
+    <script>
+        feather.replace()
+    </script>
   </body>
 </html>
 

@@ -4,15 +4,22 @@
   let adviceContent = document.getElementById("advice_content");
   let adviceCircle = document.getElementById("advice_circle");
   let adviceDice = document.getElementById("dice");
+  let shareButton = document.getElementById("share_btn");
+  let shareTooltip = document.getElementById('share_tooltip')
+  let advice = "";
+
   async function getAdvice() {
     let result = await fetch("https://api.adviceslip.com/advice");
-    return result.json();
+    let data = await result.json();
+    return data.slip
   }
+
   async function generateAdvice() {
-    let advice = await getAdvice();
-    adviceNumber.innerHTML = `Advice #${advice.slip.id}`;
-    adviceContent.innerHTML = `"${advice.slip.advice}"`;
+    advice = await getAdvice();
+    adviceNumber.innerHTML = `Advice #${advice.id}`;
+    adviceContent.innerHTML = `"${advice.advice}"`;
   }
+
   window.onload = await generateAdvice();
   adviceCircle.addEventListener("click", () => {
     adviceDice.classList.add("rotate");
@@ -21,4 +28,12 @@
       dice.classList.remove("rotate"); 
     }, 1000);
   });
+
+  shareButton.addEventListener('click', () => {
+    navigator.clipboard.writeText(`"${advice.advice}"`)
+    shareTooltip.classList.remove('hide')
+    setTimeout(function () {
+      shareTooltip.classList.add("hide"); 
+    }, 1000);
+  })
 })();
